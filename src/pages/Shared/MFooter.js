@@ -4,7 +4,7 @@ import { BsFillChatFill } from 'react-icons/bs';
 import { BsFillPeopleFill } from 'react-icons/bs';
 import { FcVideoCall } from 'react-icons/fc';
 import { MdWebStories } from 'react-icons/md';
-const Footer = () => {
+const MFooter = () => {
     return (
         <div className='navbar place-items-center flex  px-5 lg:justify-between bottom-0 fixed bg-white'>
             <Link className="btn btn-ghost normal-case text-xs flex flex-col"><BsFillChatFill className='text-fuchsia-700'></BsFillChatFill>Chats</Link>
@@ -15,4 +15,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default MFooter;

@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { IoIosVideocam } from 'react-icons/io';
 import { IoIosCall } from 'react-icons/io';
 import { AiOutlineInfo } from 'react-icons/ai';
 import { BiLeftArrowAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/UserContext';
 
 const PNav = () => {
+    const { user } = useContext(AuthContext)
     return (
         <div className='lg:bg-base-200 shadow-lg sticky top-0'>
             <div className="navbar">
@@ -18,12 +20,12 @@ const PNav = () => {
                     </div>
                     <div className="avatar">
                         <div className="w-8 rounded-full">
-                            <img alt='profile' src="https://placeimg.com/192/192/people" />
+                            <img alt='profile' src={user.photoURL} />
                         </div>
                     </div>
                 </div>
                 <div className="flex-1">
-                    <p className="normal-case text-xs font-bold">Rahim khan</p>
+                    <p className="normal-case text-xs font-bold">{user.displayName}</p>
                 </div>
                 <div className="flex">
                     <div className='mx-2 rounded-full w-10 h-10 place-items-center flex flex-col justify-center items-center'>
